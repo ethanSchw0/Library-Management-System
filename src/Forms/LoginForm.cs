@@ -51,5 +51,15 @@ namespace LibraryManagementSystem
             this.Hide();
             main.Show();
         }
+
+        private void LoginForm_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void chkShowPassword_CheckedChanged(object sender, EventArgs e)
+        {
+            txtPassword.PasswordChar = checkBox1.Checked ? '\0' : '*';
+        }
     }
 }
