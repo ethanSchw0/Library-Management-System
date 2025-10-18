@@ -1,15 +1,15 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\ethan\\Desktop\\Code\\UTS\\App Dev with NET\\Library-Management-System\\WinFormsApp1.csproj": {}
+    "C:\\Users\\ethan\\Desktop\\Code\\UTS\\App Dev with NET\\Library-Management-System\\Library.csproj": {}
   },
   "projects": {
-    "C:\\Users\\ethan\\Desktop\\Code\\UTS\\App Dev with NET\\Library-Management-System\\WinFormsApp1.csproj": {
+    "C:\\Users\\ethan\\Desktop\\Code\\UTS\\App Dev with NET\\Library-Management-System\\Library.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\ethan\\Desktop\\Code\\UTS\\App Dev with NET\\Library-Management-System\\WinFormsApp1.csproj",
-        "projectName": "WinFormsApp1",
-        "projectPath": "C:\\Users\\ethan\\Desktop\\Code\\UTS\\App Dev with NET\\Library-Management-System\\WinFormsApp1.csproj",
+        "projectUniqueName": "C:\\Users\\ethan\\Desktop\\Code\\UTS\\App Dev with NET\\Library-Management-System\\Library.csproj",
+        "projectName": "Library",
+        "projectPath": "C:\\Users\\ethan\\Desktop\\Code\\UTS\\App Dev with NET\\Library-Management-System\\Library.csproj",
         "packagesPath": "C:\\Users\\ethan\\.nuget\\packages\\",
         "outputPath": "C:\\Users\\ethan\\Desktop\\Code\\UTS\\App Dev with NET\\Library-Management-System\\obj\\",
         "projectStyle": "PackageReference",

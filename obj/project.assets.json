@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\ethan\\Desktop\\Code\\UTS\\App Dev with NET\\WinFormsApp1\\WinFormsApp1.csproj",
-      "projectName": "WinFormsApp1",
-      "projectPath": "C:\\Users\\ethan\\Desktop\\Code\\UTS\\App Dev with NET\\WinFormsApp1\\WinFormsApp1.csproj",
+      "projectUniqueName": "C:\\Users\\ethan\\Desktop\\Code\\UTS\\App Dev with NET\\Library-Management-System\\LibraryManagementSystem.csproj",
+      "projectName": "LibraryManagementSystem",
+      "projectPath": "C:\\Users\\ethan\\Desktop\\Code\\UTS\\App Dev with NET\\Library-Management-System\\LibraryManagementSystem.csproj",
       "packagesPath": "C:\\Users\\ethan\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\ethan\\Desktop\\Code\\UTS\\App Dev with NET\\WinFormsApp1\\obj\\",
+      "outputPath": "C:\\Users\\ethan\\Desktop\\Code\\UTS\\App Dev with NET\\Library-Management-System\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
