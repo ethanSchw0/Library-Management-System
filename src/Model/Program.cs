@@ -1,42 +1,36 @@
+using LibraryManagementSystem.src.Model;
 using System;
 using System.Linq;
 using System.Windows.Forms;
 
 namespace LibraryManagementSystem
 {
-    internal static class Program
+    class Program
     {
-        [STAThread]
         static void Main()
         {
-            ApplicationConfiguration.Initialize();
+            using var context = new LibraryContext();
+            context.Database.EnsureCreated();
 
-            // Ensure DB exists + seed a demo user/admin
-            using (var db = new LibraryContext())
+            // Create default admin if none exists
+            if (!context.Users.Any())
             {
-                db.Database.EnsureCreated();
-
-                if (!db.Users.Any())
+                context.Users.Add(new User
                 {
-                    db.Users.Add(new User
-                    {
-                        Email = "member@lib.com",
-                        Password = "password",
-                        FullName = "Member One",
-                        Role = "Member"
-                    });
-                    db.Users.Add(new User
-                    {
-                        Email = "admin@lib.com",
-                        Password = "admin",
-                        FullName = "Admin User",
-                        Role = "Admin"
-                    });
-                    db.SaveChanges();
-                }
+                    Username = "admin",
+                    PasswordHash = new LoginService(context)
+                        .GetType()
+                        .GetMethod("HashPassword", System.Reflection.BindingFlags.NonPublic | System.Reflection.BindingFlags.Instance)!
+                        .Invoke(new LoginService(context), new object[] { "admin123" })!.ToString(),
+                    Role = "Admin"
+                });
+                context.SaveChanges();
             }
 
-            Application.Run(new LoginForm());
+            var loginService = new LoginService(context);
+            var loginUI = new LoginUI(loginService);
+            loginUI.DisplayLogin();
         }
     }
+
 }
