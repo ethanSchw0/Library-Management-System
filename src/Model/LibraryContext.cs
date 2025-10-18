@@ -1,30 +1,20 @@
-﻿using Microsoft.EntityFrameworkCore;
-using System.IO;
+﻿using Microsoft.VisualBasic.ApplicationServices;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using Microsoft.EntityFrameworkCore;
 
-namespace LibraryManagementSystem
+namespace LibraryManagementSystem.src.Model
 {
     public class LibraryContext : DbContext
     {
-        public DbSet<User> Users => Set<User>();
-        public DbSet<Book> Books => Set<Book>();
-        public DbSet<Loan> Loans => Set<Loan>();
+        public DbSet<User> Users { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            var dbPath = Path.Combine(
-                Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData),
-                "LibraryManagementSystem",
-                "library.db");
-
-            Directory.CreateDirectory(Path.GetDirectoryName(dbPath)!);
-            optionsBuilder.UseSqlite($"Data Source={dbPath}");
-        }
-
-        protected override void OnModelCreating(ModelBuilder modelBuilder)
-        {
-            modelBuilder.Entity<User>().HasIndex(u => u.Email).IsUnique();
-            modelBuilder.Entity<Book>().HasIndex(b => b.Isbn);
+            optionsBuilder.UseSqlite("Data Source=library.db");
         }
     }
 }
-
